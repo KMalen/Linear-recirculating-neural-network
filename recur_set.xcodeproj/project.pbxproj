@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		01367D0125233C5100AFFFCD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01367D0025233C5100AFFFCD /* main.swift */; };
+		01571823252CC29C0047746A /* SwiftImage in Frameworks */ = {isa = PBXBuildFile; productRef = 01571822252CC29C0047746A /* SwiftImage */; };
+		01571827252CC34E0047746A /* LASwift in Frameworks */ = {isa = PBXBuildFile; productRef = 01571826252CC34E0047746A /* LASwift */; };
+		01673177252CB93100868C59 /* ImageToBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01673176252CB93100868C59 /* ImageToBlocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,7 @@
 /* Begin PBXFileReference section */
 		01367CFD25233C5100AFFFCD /* recur_set */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = recur_set; sourceTree = BUILT_PRODUCTS_DIR; };
 		01367D0025233C5100AFFFCD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		01673176252CB93100868C59 /* ImageToBlocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToBlocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01571823252CC29C0047746A /* SwiftImage in Frameworks */,
+				01571827252CC34E0047746A /* LASwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +63,18 @@
 		01367CFF25233C5100AFFFCD /* recur_set */ = {
 			isa = PBXGroup;
 			children = (
+				01571829252CC4E10047746A /* images */,
 				01367D0025233C5100AFFFCD /* main.swift */,
+				01673176252CB93100868C59 /* ImageToBlocks.swift */,
 			);
 			path = recur_set;
+			sourceTree = "<group>";
+		};
+		01571829252CC4E10047746A /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +93,10 @@
 			dependencies = (
 			);
 			name = recur_set;
+			packageProductDependencies = (
+				01571822252CC29C0047746A /* SwiftImage */,
+				01571826252CC34E0047746A /* LASwift */,
+			);
 			productName = recur_set;
 			productReference = 01367CFD25233C5100AFFFCD /* recur_set */;
 			productType = "com.apple.product-type.tool";
@@ -105,6 +124,10 @@
 				Base,
 			);
 			mainGroup = 01367CF425233C5100AFFFCD;
+			packageReferences = (
+				01571821252CC29C0047746A /* XCRemoteSwiftPackageReference "swift-image" */,
+				01571825252CC34E0047746A /* XCRemoteSwiftPackageReference "LASwift" */,
+			);
 			productRefGroup = 01367CFE25233C5100AFFFCD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -119,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01673177252CB93100868C59 /* ImageToBlocks.swift in Sources */,
 				01367D0125233C5100AFFFCD /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +305,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01571821252CC29C0047746A /* XCRemoteSwiftPackageReference "swift-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/koher/swift-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+		01571825252CC34E0047746A /* XCRemoteSwiftPackageReference "LASwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexandertar/LASwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01571822252CC29C0047746A /* SwiftImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01571821252CC29C0047746A /* XCRemoteSwiftPackageReference "swift-image" */;
+			productName = SwiftImage;
+		};
+		01571826252CC34E0047746A /* LASwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01571825252CC34E0047746A /* XCRemoteSwiftPackageReference "LASwift" */;
+			productName = LASwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01367CF525233C5100AFFFCD /* Project object */;
 }
