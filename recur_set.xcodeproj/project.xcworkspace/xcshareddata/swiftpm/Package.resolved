@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "LASwift",
+        "repositoryURL": "https://github.com/alexandertar/LASwift",
+        "state": {
+          "branch": null,
+          "revision": "c69bf3903dcf61d292823e5da82b78b6e7086d71",
+          "version": "0.2.3"
+        }
+      },
+      {
+        "package": "Nimble",
+        "repositoryURL": "https://github.com/Quick/Nimble.git",
+        "state": {
+          "branch": null,
+          "revision": "7a46a5fc86cb917f69e3daf79fcb045283d8f008",
+          "version": "8.1.2"
+        }
+      },
+      {
+        "package": "Quick",
+        "repositoryURL": "https://github.com/Quick/Quick.git",
+        "state": {
+          "branch": null,
+          "revision": "09b3becb37cb2163919a3842a4c5fa6ec7130792",
+          "version": "2.2.1"
+        }
+      },
+      {
+        "package": "SwiftImage",
+        "repositoryURL": "https://github.com/koher/swift-image.git",
+        "state": {
+          "branch": null,
+          "revision": "c61b8cf4613a7fc80d1c2a84231cef2909e837a1",
+          "version": "0.7.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
