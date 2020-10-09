@@ -50,9 +50,6 @@ class ImageToBlocs {
         }
         
         var regions = [(beginPoint: point, endPoint:point)]()
-        var index = 0
-        
-        var tex = regions[0].beginPoint.x
         
         for i in 0..<mClearStep {
             
@@ -60,38 +57,34 @@ class ImageToBlocs {
                 
                 if ((j + 1) * nSize <= img.width && (i + 1) * mSize <= img.height) {
                     
-                    regions[index].beginPoint = point(x: j * nSize, y: i * mSize)
-                    regions[index].endPoint = point(x: (j + 1) * nSize, y: (i + 1) * mSize)
+                    regions.append((beginPoint: point.init(x: j * nSize, y: i * mSize),
+                                    endPoint: point.init(x: (j + 1) * nSize, y: (i + 1) * mSize)))
                     
-                    index += 1
                     continue
                 }
                 
                 if ((j + 1) * nSize > img.width && (i + 1) * mSize > img.height) {
                     
-                    regions[index].beginPoint = point(x: img.width - nSize, y: img.height - mSize)
-                    regions[index].endPoint = point(x: img.width, y: img.height)
+                    regions.append((beginPoint: point.init(x: img.width - nSize, y: img.height - mSize),
+                                    endPoint: point.init(x: img.width, y: img.height)))
                     
-                    index += 1
                     continue
                     
                 }
                 
                 if ((j + 1) * nSize <= img.width && (i + 1) * mSize > img.height) {
                     
-                    regions[index].beginPoint = point(x: j * nSize, y: img.height - mSize)
-                    regions[index].endPoint = point(x: (j + 1) * nSize, y: img.height)
+                    regions.append((beginPoint: point.init(x: j * nSize, y: img.height - mSize),
+                                    endPoint: point.init(x: (j + 1) * nSize, y: img.height)))
                     
-                    index += 1
                     continue
                 }
                 
                 if ((j + 1) * nSize > img.width && (i + 1) * mSize <= img.height) {
                     
-                    regions[index].beginPoint = point(x: img.width - nSize, y: i * mSize)
-                    regions[index].endPoint = point(x: img.width, y: (i + 1) * mSize)
-                    
-                    index += 1
+                    regions.append((beginPoint: point.init(x: img.width - nSize, y: i * mSize),
+                                    endPoint: point.init(x: img.width, y: (i + 1) * mSize)))
+
                 }
                 
             }
@@ -99,28 +92,5 @@ class ImageToBlocs {
         }
         
     }
-    
-    class Block {
-        
-        var redPixel = UInt8()
-        var greenPixel = UInt8()
-        var bluePixel = UInt8()
-        
-    }
-    
-    
-    
-//    func testImage(img:Image<RGBA<UInt8>>){
-//        print("hello")
-//        self.imageOne = img.yReversed()
-//
-//        if let image = imageOne {
-//            if let data = image.pngData() {
-//                let filename = getDocumentsDirectory().appendingPathComponent("copy.png")
-//                try? data.write(to: filename)
-//            }
-//        }
-//
-//    }
     
 }

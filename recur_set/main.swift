@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+var testFunc = ImageToBlocs()
+
+testFunc.imgToBlocks(img: testFunc.imageOne!, nSize: 20, mSize: 20)
